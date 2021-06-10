@@ -10,7 +10,7 @@ def polyReg(x,y,degree):
 
     model = LinearRegression()
     model.fit(x_poly, y)
-    y_poly_pred = model.predict(x_poly)
+    y_poly_pred = model.predict(x_poly) # Can be done without .predict call also(?)
 
     rmse = np.sqrt(mean_squared_error(y,y_poly_pred))
     r2 = r2_score(y,y_poly_pred)
